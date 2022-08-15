@@ -35,7 +35,7 @@ public class MyService {
 
     private IMySelector mySelector;
 
-    public TestedClass(IMySelector mySelector) {
+    public MyService(IMySelector mySelector) {
         this.mySelector = mySelector;
     }
 
@@ -510,3 +510,17 @@ Account updatedAccount = (Account) MockerUtils.updateObjectState(
     }
 );
 ```
+
+# Issues And Feature Requests
+
+Use the Github Issues feature to reach out if you have feedback/questions/bugs/feature requests etc.
+
+Please do file any issue you find, keeping the following in mind:
+
+- Create only one issue per bug or feature request.
+- Add as much information as possible and the steps to reproduce the error.
+- Only add relevant comments to the issues. Many people get notified when a commentary is added to the issue, so let's keep them relevant.
+
+# License
+
+[BSD 3-Clause License](LICENSE)
