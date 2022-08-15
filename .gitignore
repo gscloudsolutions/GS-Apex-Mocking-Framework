@@ -47,3 +47,6 @@ $RECYCLE.BIN/
 /out/
 target/
 .idea
+
+# Ignore pipeline
+bitbucket-pipelines.yml
