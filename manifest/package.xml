@@ -11,6 +11,10 @@
         <members>MockerTestFixture</members>
         <members>MockerUtils</members>
         <members>MockerUtilsTest</members>
+        <members>LeadSelector</members>
+        <members>LeadService</members>
+        <members>DmlHelper</members>
+        <members>LeadServiceTest</members>
         <name>ApexClass</name>
     </types>
     <version>55.0</version>
