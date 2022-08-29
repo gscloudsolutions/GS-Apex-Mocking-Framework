@@ -1,5 +1,6 @@
 # Mocker Mocking Framework
-Mocker is a mocking framework that helps you to create mocks for APEX classes and interfaces.
+
+Mocker is a mocking framework that helps you create mocks for APEX classes and interfaces.
 It is super easy to use and helpful for unit testing.
 
 ## How To Create Unit Tests For Your Application
@@ -87,9 +88,9 @@ public class MyService {
 
 The Mocker Framework works in three phases: Stubbing, Executing (Replaying) and Asserting.
 
-* _Stubbing_ phase: The Mocker Framework will record the mock actions and expected behaviours;
-* _Executing_ phase: It will replay the recorded actions such as mocked return values or exceptions, and it will record any action executed over the mock instance;
-* _Asserting_ phase: It will assert if the mock has executed the expected behaviours.
+- _Stubbing_ phase: The Mocker Framework will record the mock actions and expected behaviours;
+- _Executing_ phase: It will replay the recorded actions such as mocked return values or exceptions, and it will record any action executed over the mock instance;
+- _Asserting_ phase: It will assert if the mock has executed the expected behaviours.
 
 ### Mocking Methods Return Value
 
@@ -172,6 +173,7 @@ public class MyTest {
     }
 }
 ```
+
 #### Combining The Mocking Method Return Strategies
 
 Or you can mix both approaches...
@@ -212,7 +214,7 @@ public class MyTest {
 
 You can implement the _System.Callable_ interface and use this class to generate dynamic values that will be returned by the mocked method.
 
-The _methodName_ parameter will contain the method name that was called, and the _params_ parameter the arguments passed to it during the method execution.
+The _methodName_ parameter will contain the method name that was called, and the _params_ parameter will contain the arguments passed to it during the method execution.
 
 An example of a callable mock return:
 
@@ -234,9 +236,10 @@ You can pass your callable class instance on the _.thenReturn_ method. It will i
         .withAnyValues() // Because the parameter value will be ignored
         .thenReturn(new GetContactCallableReturn()); // Your callable mock return.
 ```
+
 ### Asserting Captured Arguments
 
-The Mocker Framework records all arguments passed to a mock method, and these data are accessible through the _Mocker.MethodRecorder_. It allows you to track and assert all data received by your mock class.
+The Mocker Framework records all arguments passed to a mock method, and these data is accessible through the _Mocker.MethodRecorder_. It allows you to track and assert all data received by your mock class.
 
 ```java
 @IsTest
@@ -398,10 +401,10 @@ Those behaviours will be asserted when you call Mocker.assert() method.
 
 There are four method behaviours that you can assert:
 
-* The mocked method should be called once => .shouldBeCalledOnce();
-* The mocked method should be called N times => .shouldBeCalled(Integer times);
-* The mocked method should be never called => shouldNeverBeCalled();
-* Mock method should be called between min and max times => shouldBeCalledBetween(Integer minTimes, Integer maxTimes);
+- The mocked method should be called once => .shouldBeCalledOnce();
+- The mocked method should be called N times => .shouldBeCalled(Integer times);
+- The mocked method should be never called => shouldNeverBeCalled();
+- Mock method should be called between min and max times => shouldBeCalledBetween(Integer minTimes, Integer maxTimes);
 
 To assert if the expected behaviour in your mock class has been executed, you will need to call the _mocker.assert()_ method. This method compares all activities received by your mock during the execution phase with the expected ones. The assertions are made using the Salesforce System.assert operations.
 
@@ -510,6 +513,10 @@ Account updatedAccount = (Account) MockerUtils.updateObjectState(
     }
 );
 ```
+
+# Unit Tests Samples
+
+You can find several examples of unit tests using the mocking framework in the [samples directory](sfdx-source/main/default/samples/classes/).
 
 # Issues And Feature Requests
 
